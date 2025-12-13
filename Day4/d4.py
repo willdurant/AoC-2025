@@ -42,19 +42,19 @@ def identify_all_rolls(rows: list[str]) -> int:
 
 
 def main() -> None:
-    test_input = """..xx.xx@x.
-x@@.@.@.@@
-@@@@@.x.@@
+    test_input = """..@@.@@@@.
+@@@.@.@.@@
+@@@@@.@.@@
 @.@@@@..@.
-x@.@@@@.@x
+@@.@@@@.@@
 .@@@@@@@.@
 .@.@.@.@@@
-x.@@@.@@@@
+@.@@@.@@@@
 .@@@@@@@@.
-x.x.@@@.x.""".splitlines()
+@.@.@@@.@."""
     expected_output = 13
     print(f"Part 2 Test: input:\n{test_input}\nexpected output: {expected_output}")
-    test_output = identify_all_rolls(test_input)
+    test_output = identify_all_rolls(test_input.splitlines())
     assert test_output == expected_output, f"Test failed! Returned {test_output}"
     print("Test passed!")
 
